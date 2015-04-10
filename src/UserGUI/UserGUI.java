@@ -5,6 +5,15 @@
  */
 package UserGUI;
 
+import java.awt.Cursor;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.io.File;
+import javax.swing.Icon;
+
 /**
  *
  * @author Paul
@@ -14,8 +23,18 @@ public class UserGUI extends javax.swing.JFrame {
     /**
      * Creates new form UserGUI
      */
+    private GraphicsDevice device;
+    
     public UserGUI() {
         initComponents();
+         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        device = ge.getDefaultScreenDevice();
+        device.setFullScreenWindow(this);
+//          Toolkit toolkit = Toolkit.getDefaultToolkit();
+//          System.out.println(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icons"+File.separator+"_318-9064.jpg");
+//            Image image = toolkit.getImage(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icons"+File.separator+"fmksR.gif");
+//         Cursor c = toolkit.createCustomCursor(image , new Point(this.getX(),this.getY()), "");
+//         this.setCursor (c);
     }
 
     /**
@@ -27,18 +46,12 @@ public class UserGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +92,6 @@ public class UserGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
