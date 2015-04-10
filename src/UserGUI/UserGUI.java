@@ -13,6 +13,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.io.File;
 import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -30,11 +31,16 @@ public class UserGUI extends javax.swing.JFrame {
          GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         device = ge.getDefaultScreenDevice();
         device.setFullScreenWindow(this);
-//          Toolkit toolkit = Toolkit.getDefaultToolkit();
-//          System.out.println(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icons"+File.separator+"_318-9064.jpg");
-//            Image image = toolkit.getImage(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icons"+File.separator+"fmksR.gif");
-//         Cursor c = toolkit.createCustomCursor(image , new Point(this.getX(),this.getY()), "");
-//         this.setCursor (c);
+         Toolkit toolkit = Toolkit.getDefaultToolkit();
+         System.out.println(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icon"+File.separator+"_318-9064.jpg");
+         Image image = toolkit.getImage(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icon"+File.separator+"_318-9064.jpg");
+         System.out.println("adfasdf");
+         Cursor c = toolkit.createCustomCursor(image , new Point(this.getX(),this.getY()), "");
+         this.setCursor (c);
+        //ImageIcon icon = new ImageIcon(System.getProperty("user.dir")+File.separator+"src"+File.separator+"icon"+File.separator+"_318-9064.jpg");
+//        jLabel1.setOpaque(false);
+//        jLabel1.setIcon(icon);
+        jLabel1.setText("");
     }
 
     /**
@@ -46,7 +52,31 @@ public class UserGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout(2, 0));
+
+        jPanel1.setLayout(new java.awt.GridLayout(1, 2));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel1);
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel2);
+
+        getContentPane().add(jPanel1);
+
+        jPanel2.setLayout(new java.awt.GridLayout());
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel2.add(jLabel3);
+
+        getContentPane().add(jPanel2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -87,5 +117,10 @@ public class UserGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
